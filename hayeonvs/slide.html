@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/slide.css">
+</head>
+<body>
+    <div class="slider-wrap">
+        <div class="slider-img">
+            <div class="slider s1"><img src="https://images.unsplash.com/photo-1515871204537-49a5fe66a31f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fHBpbmt8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60" alt=""></div>
+            <div class="slider s2"><img src="https://images.unsplash.com/photo-1497114046243-1154db4f4abf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fHBpbmt8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60" alt=""></div>
+            <div class="slider s3"><img src="https://images.unsplash.com/photo-1562008928-6185cc645f76?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDR8fHBpbmt8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60" alt=""></div>
+            <div class="slider s4"><img src="https://images.unsplash.com/photo-1617118600978-0881797db5c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTd8fHBpbmt8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60" alt=""></div>
+            <div class="slider s5"><img src="https://images.unsplash.com/photo-1595248712807-2bb09673bfe0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODJ8fHBpbmt8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60" alt=""></div>
+        </div>
+        <div class="slider-btn">
+            <a href="#" class="prev">prev</a>
+            <a href="#" class="next">next</a>
+        </div>
+    </div>
+
+
+    <script>
+
+        const sliderWrap = document.querySelector('.slider-wrap'),
+              sliderImg = document.querySelector('.slider-img'),
+              slider = document.querySelectorAll('.slider'),
+              sliderBtn = document.querySelector('.slider-btn');
+
+        let sliderCount = slider.length; //슬라이더의 갯수
+        let sliderWidth = slider.width(); //슬라이더 위드값
+        let sliderTotalWidth = sliderCount * sliderWidth; //슬라이더갯수*슬라이더위드값 (전체위드값)
+
+        sliderImg.css({marginLeft:-sliderWidth});
+        document.querySelector('.slider').lastChild.prepend(sliderImg);
+
+        function movePrev(){
+            sliderImg.animate({left: +sliderWidth},400, function(){
+                document.querySelector('.slider').lastChild.prepend(sliderImg);
+                sliderImg.css("left","");
+            })
+        };
+
+        document.querySelector('.prev').click(function(){
+            alert("ggg");
+            // movePrev();
+        });
+        
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+.left-menu {
+    width: 150px;
+    height: 100%;
+    background: black;
+    color: white;
+    position: fixed;
+    margin-left: -150px;
+}
+.leftmenu_show {
+    margin-left:0px;
+    transition: all 0.5s;
+}
+.main-background {
+    background-image: url(https://images.unsplash.com/photo-1561037404-61cd46aa615b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80);
+    background-size: cover;
+    color: white;
+    border-radius: 0px;
+}
+.black-background {
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+    transition: all 1s;
+    transform: translateY(-100%);
+}
+.slide-down {
+    transform: translateY(0%);
+}
+.white-background {
+    background: #fff;
+    width: 80%;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    background : #000;
+    color: white;
+    position: fixed;
+    font-size: 50px;
+    transition: all 0.5s;
+}
+.nav-menu h4 {
+    font-size: 50px;
+}
+
+.navactive {
+    background: white;
+    color: #000;
+    font-size: 20px;
+    transition: all 0.5s;
+}
+.nav-sub {
+    display: none;
+}
+.alertbox, .passalert, .alertbox1 {
+    display: none;
+}
+
+/* slide */
+.containerbox {
+    width: 800px;
+    height: 50vh;
+    margin: 0 auto;
+    
+}
+.slide-container {
+    width: 300vw;
+    transition: transform 1s;
+    
+    
+}
+.slide-box {
+    width: 100vw;
+    float: left;
+    position: relative;
+    
+}
+.slide-box img{
+    width: 100%;
+    height: 50vh;
+    
+}
+.btncontain {
+    width: 800px;
+    margin: 0 auto;
+}
+.slide-next {
+    position: absolute;
+    top: 45%;
+    right: 0;
+}
+.slide-prev {
+    position: absolute;
+    top: 45%;
+    left: 0;
+}
+
+/* tab-menu */
+ul.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #ccc;
+}
+ul.list::after {
+    content:'';
+    display: block;
+    clear: both;
+}
+.tab-button {
+    display: block;
+    padding: 10px 20px 10px 20px;
+    float: left;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    color: grey;
+    text-decoration: none;
+    cursor: pointer;
+}
+.active {
+    border-top: 2px solid orange;
+    background-repeat: 1px solid #ccc;
+    border-bottom: 1px solid white;
+    border-left: 1px solid #ccc;
+    color: black;
+    margin-top: -2px;
+}
+.tab-content {
+    display: none;
+    padding: 10px;
+}
+.show {
+    display: block;
+}
