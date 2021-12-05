@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+<body>
+    <script>
+        var 출석부 = ['홍민','영희','철수','재석'];
+
+        function 이름찾기(){
+            //array에서 철수라는 값이 있는지 찾기 
+            출석부.forEach(function(i){
+                i==='철수' ? alert('있서요') : null;
+            });
+        }
+        이름찾기()
+        
+        // function 이름찾기(구멍){
+        //     if(구멍==출석부[0]){
+        //         alert('있어요')
+        //     } else if (구멍==출석부[1]){
+        //         alert('있어요')
+        //     } else if (구멍==출석부[2]){
+        //         alert('있어요')
+        //     } else{
+        //         alert('있어요')
+        //     }
+        // }
+
+        // 이름찾기('철수');
+    </script>
+</body>
+</html>

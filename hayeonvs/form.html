@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="./form.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+
+    <form class="container my-5">
+        <div class="form-group">
+            <p>상품선택</p>
+            <select class="form-control" id="option1">
+                <option >바지</option>
+                <option selected>셔츠</option>
+            </select>
+
+            <div class="size-select">
+                <p class="mt-4">사이즈선택</p>
+                <select class="form-control" id="option2">
+
+                </select>
+            </div>
+        </div>
+    </form>
+
+    <script>
+
+        //select 인풋에서 셔츠라는 값을 선택하면 밑에 사이즈선택 ui를 보여줌
+        // $('#option1').on('change',function(){
+        //     //만약 사용자가 선택한 값이 셔츠인 경우에 ui보여줌
+        //     if( $('select').val()=='셔츠' ){
+        //         $('.size-select').show();
+        //     } else {
+        //         $('.size-select').hide();
+        //     }
+        // });
+
+
+        // function appendOption(){
+
+        //     if ( $('#option1').val()=='바지' ){
+        //         //$('#option2') 안에 있는 html들을 말끔히 지워주고
+        //         $('#option2').html('');
+        //         var 템플릿2 = `<option>28</option>
+        //         <option>30</option>
+        //         <option>32</option>`;
+        //         $('#option2').append(템플릿2);
+        //     }
+        //     else if( $('#option1').val()=='셔츠' ){
+        //         //$('#option2') 안에 있는 html들을 말끔히 지워주고
+        //         $('#option2').html('');
+        //         var 템플릿 = `<option>95</option>
+        //         <option>100</option>
+        //         <option>105</option>`;
+        //         $('#option2').append(템플릿);
+        //     }
+        // }
+        // window.onload()
+        // appendOption()
+        // $('#option1').on('change',appendOption);
+
+        var 사이즈 = [26,28,30,32,34,36];
+        //for문 축약
+        // $('#option1').on("change",function(){
+        //     if($('#option1').val()=='바지'){
+        //         for (var i=0; i<사이즈.length; i++){
+        //             var 템플릿 = `<option>${사이즈[i]}</option>`; //`` 사이에변수집어넣을때
+        //             $('#option2').append(템플릿);
+        //         }
+        //     }
+        // })
+
+        //forEach
+        $('#option1').on('change',function(){
+            if($('#option1').val()=='바지'){
+                사이즈.forEach(function(i){
+                    var 템플릿 = `<option>${i}</option>`;
+                    $('#option2').append(템플릿);
+                })
+            }
+        })
+
+        
+
+
+    </script>
+
+
+</body>
+</html>

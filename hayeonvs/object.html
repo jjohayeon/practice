@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    
+    <h4 class="title">상품제목</h4>
+    <p class="content">상품내용</p>
+    <div style="margin-bottom: 500px"></div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script>
+        // 자료형 정리
+        //Array Object
+
+        // var 어레이 = ["BMW", 520]; //대괄호로 생성, 자료들을 콤마로 구분
+        // console.log(어레이[0]);
+
+        // var 오브젝트 = { brand: "BMW", model: 520 }; //중괄호로 생성, 자료 왼쪽에 이름을 써야함
+        // console.log(오브젝트.model);
+
+
+        //데이터바인딩
+
+        var arr = ['BMW', 520];
+        var obj = {brand: 'BMW', model: 520}
+
+        var 자료 = [ {brand:'BMW'}, { model: 520} ];
+
+        // javascript
+        // document.querySelector('.title').innerHTML=(arr[0]);
+        // document.querySelector('.content').innerHTML=(obj.model);
+
+        //jquery
+        // $('.title').html(arr[0]);
+        // $('.content').html(obj.model);
+
+        document.querySelector('.title').innerHTML=(자료[0].brand);
+        document.querySelector('.content').innerHTML=(자료[1].model);
+
+        
+    </script>
+
+</body>
+</html>
